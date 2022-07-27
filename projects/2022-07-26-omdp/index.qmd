@@ -1,6 +1,8 @@
 ---
 title: "Organ Mountains Desert Peaks Perishables Exhibit"
 author: "Nathan Craig"
+date: 2022/07/26
+date-format: long
 ---
 
 ```{r setup, include=FALSE}
@@ -36,61 +38,69 @@ source(here::here("projects/2022-07-26-omdp/scripts/read_data_omdp.R"))
 plot_alpha <- 0.7
 ```
 
+:::{.callout-important}
+## Draft Document
 
-Generally, being put on exhibit stresses objects. This is largely because high amplitude changes in environmental conditions stress objects, and the environmental conditions in a gallery often fluctuate more than the environmental conditions in storage. For delicate organic materials and textiles this issue of damage caused by fluctuating environmental conditions is particularly acute.  
+This is an incomplete draft document.
 
-In the Fall of 2022, the University Museum will be exhibiting delicate archaeological perishables from Chavez Cave in the Organ Mountains of Las Cruces, NM. Exhibiting these objects thus presents some conservation challenges.
+:::
 
-Given the research and heritage importance of these irreplaceable objects, and their delicate nature, we took several precautionary steps to ensure their safety while on display. Key among those was tracking environmental conditions and mitigating potentially harmful situations.
+# Introduction
 
-One of our primary concerns was determining the environmental conditions of the West Gallery and the specific micro-environments of the display cases. While we record environmental conditions in several rooms of the Museum, previously we were not logging conditions in the West Gallery because there were no organic materials on display. Therefore, to track the conditions in the West Gallery before setting up the exhibit we placed one of the Museum's standard loggers in the room in early July of 2022. Several weeks later we followed up by including two additional loggers in the gallery that can be used to compare micro-environmental conditions inside and outside of display cases containing the objects. In total, three loggers were placed in the West Gallery: an EasyLog EL-SIE-2+ which is the primary logger used in the museum, and two Govee H5101 bluetooth loggers (@fig-loggers).
+Generally, it is stressful on an object to be placed on exhibit. This means there is a balance between the dual responsibilities of facilitating public access to observe objects and ensuring the object's long term conservation. The stress on exhibited objects is largely (though not entirely) due to high amplitude changes in environmental conditions. The environmental conditions in a gallery often fluctuate far more than the environmental conditions in long-term storage. Thus, it can be a shock to the object to be removed from long term storage and placed directly on display. For delicate organic materials and textiles this issue is particularly acute.  Therefore, when exhibiting delicate organic materials it is important to pay close attention to the environmental conditions where the object is stored and where it will be exhibited. Doing this requires collecting baseline data on both storage and exhibit settings before the object is moved.
+
+# Background
+
+In the Fall of 2022, the University Museum will be exhibiting delicate archaeological perishables from Chavez Cave in the Organ Mountains of Las Cruces, NM. Exhibiting these objects presents some conservation challenges, and among these is mitigating possible harms created by changing environmental conditions. Given the research and heritage importance of these irreplaceable objects, and their delicate nature, we took several precautionary steps to ensure their safety while on display. Key among those was tracking environmental conditions and mitigating potentially harmful situations.
+
+From ongoing environmental monitoring of the Kent Hall, we know that temperature and humidity fluctuate more in the galleries than they do in any of the long-term storage facilities.  
+
+One of our primary concerns was determining the environmental conditions of the West Gallery and the specific micro-environments of the display cases therein. While we record environmental conditions in several rooms of the Museum, previously we were not logging conditions in the West Gallery because, at the time, there were no organic materials on display. Therefore, to track the conditions in the West Gallery before setting up the exhibit we placed one of the Museum's standard loggers in the room in early July of 2022. Shortly after, we followed up by including two additional loggers in the gallery that can be used to compare micro-environmental conditions both inside and outside of the display cases that will contain the objects. In total, three loggers were placed in the West Gallery: an EasyLog EL-SIE-2+ which is the primary logger used in the museum, and two Govee H5101 bluetooth loggers (@fig-loggers).
 
 ::: {.column-margin}
 ![EasyLog EL-SIE-2+ in the front and two Govee H5101 bluetooth loggers in the back.](images/three_loggers_start.jpg){#fig-loggers}
 :::
 
-First, we wanted to see if the Govee loggers were consistent with readings generated by the EasyLog ([Figures @fig-wg-temp-all] and [-@fig-wg-rh-all]). If the data are consistent, then the Govee loggers can be used to compare conditions inside and outside of the display cases. After running these three loggers for 48 hours, we pulled the data to see if the three devices were getting consistent readings.
+# Research Questions
 
-Second, we wanted to see if the conditions within the display cases are more stable than the conditions outside of the display cases. NOTE THIS IS NOT COMPLETE.
+**Question 1** (ANALYSIS INCOMPLETE): Do the EasyLog and Govee loggers produce consistent data? If the data are consistent, then the Govee loggers can be used to compare conditions inside and outside of the display cases. If the data are not consistent, then it raises the question why? After running the three loggers for 48 hours, we pulled the data to see if the three devices were getting consistent readings ([Figures @fig-wg-temp-all] and [-@fig-wg-rh-all]).
 
-::: panel-tabset
-## Temperature
+**Question 2** (IN PROGRESS): Are the conditions within the display cases more stable than the conditions outside of the display cases?
 
 ::: column-page
 ```{r temp-all}
 #| label: fig-wg-temp-all
 #| fig-cap: "Temperature readings across all monitored rooms."
 
-ts_list$temp_merge %>% 
-  window(., start = "2022-07-22 10:00:00") %>% 
+ts_list$temp_merge["2022-07-22 13:00:00/"] %>% 
+  # window(., start = "2022-07-22 10:00:00") %>%
   dygraph(.,
-          main = "Temperature (°F) comparison") %>% 
-    dyRoller(rollPeriod = 10) %>% 
+          main = "Temperature (°F) comparison",
+          group = "omdp") %>% 
+    dyRoller(rollPeriod = 11) %>% 
     dyHighlight(highlightCircleSize = 5,
                 highlightSeriesBackgroundAlpha = 0.2,
                 hideOnMouseOut = TRUE) %>% 
     dySeries("wg_temp", label = "West Gallery Logger") %>% 
-    dySeries("omdp1_temp", label = "OMDP Logger 1") %>% 
-    dySeries("omdp2_temp", label = "OMDP Logger 2") %>% 
+    dySeries("omdp1_temp", label = "OMDP Logger 1") %>%
+    dySeries("omdp2_temp", label = "OMDP Logger 2") %>%
       dyLimit(65, color = "Red", label = "Temp Lower") %>% 
     dyLimit(75, color = "Red", label = "Temp Upper") %>% 
     dyAxis("y", label = "Temperature (°F)") %>% 
     dyRangeSelector()
 ```
-:::
 
-## Relative Humidity
 
-::: column-page
 ```{r rh-all}
 #| label: fig-wg-rh-all
 #| fig-cap: "Relative humidity readings across all monitored rooms."
 
-ts_list$rh_merge %>% 
-  window(., start = "2022-07-22 10:00:00") %>% 
+ts_list$rh_merge["2022-07-22 13:00:00/"] %>% 
+  # window(., start = "2022-07-22 10:00:00") %>%
   dygraph(.,
-          main = "% Relative Humidity (°F) comparison") %>% 
-    dyRoller(rollPeriod = 10) %>% 
+          main = "% Relative Humidity (°F) comparison",
+          group = "omdp") %>% 
+    dyRoller(rollPeriod = 11) %>% 
     dyHighlight(highlightCircleSize = 5,
                 highlightSeriesBackgroundAlpha = 0.2,
                 hideOnMouseOut = TRUE) %>% 
@@ -105,5 +115,6 @@ ts_list$rh_merge %>%
 :::
 
 
-:::
+# Results
 
+**Question 1**: 

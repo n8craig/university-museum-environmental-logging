@@ -58,8 +58,6 @@ dygraph(ts_list$temp_merge,
   dySeries("wl_temp", label = "Wet Lab") %>% 
   dySeries("eg_temp", label = "East Gallery") %>% 
   dySeries("base_temp", label = "Basement") %>% 
-  
-  
   dyLimit(65, color = "Red", label = "Temp Lower") %>% 
   dyLimit(75, color = "Red", label = "Temp Upper") %>% 
   dyAxis("y", label = "Temperature (°F)") %>% 
