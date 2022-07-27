@@ -1,0 +1,231 @@
+---
+title: "Environmental Data by Logger"
+---
+
+*Last modified: `r format(Sys.time(), '%A, %B %d, %Y')`*
+
+This page displays temperature, relative humidity, and dew point by logger. These visualizations are useful for closely examining the conditions in a given room that is logged.
+
+```{r setup, include=FALSE}
+
+# Knitr options
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+  )
+
+# Load data
+# source("read_data.R")
+# sys.source("read_data.R")
+# library(ggplot2)
+
+library(readr) # read CSV file
+library(tidyverse)
+# library(plotly) # interactive plots
+
+# Time series
+library(xts) # convert df to ts
+library(dygraphs) # plot ts 
+
+```
+
+
+```{r read-data}
+source(here::here("scripts/read_data.R"))
+```
+
+```{r set-alpha}
+plot_alpha <- 0.7
+```
+
+
+::: panel-tabset
+## Textile Room
+
+<!-- Textile Room -->
+
+::: column-page
+```{r textile-room-logger}
+#| label: fig-textile-room-logger
+#| fig-cap: "Observations from data logger located in the textile room."
+#| fig-subcap: 
+#|   - "Temperature readings in the Textile Room."
+#|   - "Relative humidity readings in the Textile Room."
+#|   - "Dew point readings in the Textile Room."
+
+
+dygraph(ts_list$textile_temp,
+        main = "Textile Room: Temperature",
+        group = "textile-room") %>%
+  dySeries("V1",
+           label = "Temp (°F)",
+           color = "black") %>% 
+  dyLimit(65, color = "Red", label = "Temp Lower") %>% 
+  dyLimit(75, color = "Red", label = "Temp Upper") %>% 
+  dyAxis("y", label = "Temp (°F)") %>%
+  dyRangeSelector()
+
+dygraph(ts_list$textile_rh,
+        main = "Textile Room: % RH",
+        group = "textile-room") %>%
+  dySeries("V1",
+           label = "% RH",
+           color = "black") %>%
+  dyLimit(45, color = "Blue", label = "RH Lower") %>% 
+  dyLimit(55, color = "Blue", label = "RH Upper") %>% 
+  dyAxis("y", label = "% RH") %>%
+  dyRangeSelector()
+
+dygraph(ts_list$textile_dp,
+        main = "Textile Room: Dew Point",
+        group = "textile-room") %>%
+  dySeries("V1",
+           label = "°F Td",
+           color = "black") %>% 
+  dyAxis("y", label = "°F Td") %>%
+  dyRangeSelector()
+```
+:::
+
+## Wet Lab
+
+<!-- Wet Lab -->
+
+::: column-page
+```{r wet-lab-logger}
+#| label: fig-wet-lab-logger
+#| fig-cap: "Observations from data logger located in the Wet Lab."
+#| fig-subcap: 
+#|   - "Temperature readings in the Wet Lab."
+#|   - "Relative humidity readings in the Wet Lab."
+#|   - "Dew point readings in the Wet Lab."
+
+dygraph(ts_list$wl_temp,
+        main = "Wet Lab: Temperature",
+        group = "wl") %>%
+  dySeries("V1",
+           label = "Temp (°F)",
+           color = "black") %>% 
+  dyLimit(65, color = "Red", label = "Temp Lower") %>% 
+  dyLimit(75, color = "Red", label = "Temp Upper") %>% 
+  dyAxis("y", label = "Temp (°F)") %>%
+  dyRangeSelector()
+
+dygraph(ts_list$wl_rh,
+        main = "Wet Lab: % RH",
+        group = "wl") %>%
+  dySeries("V1",
+           label = "% RH",
+           color = "black") %>%
+  dyLimit(45, color = "Blue", label = "RH Lower") %>% 
+  dyLimit(55, color = "Blue", label = "RH Upper") %>% 
+  dyAxis("y", label = "% RH") %>%
+  dyRangeSelector()
+
+dygraph(ts_list$wl_dp,
+        main = "Wet Lab: Dew Point",
+        group = "wl") %>%
+  dySeries("V1",
+           label = "°F Td",
+           color = "black") %>% 
+  dyAxis("y", label = "°F Td") %>%
+  dyRangeSelector()
+
+```
+:::
+
+## East Gallery
+
+<!-- East Gallery -->
+
+::: column-page
+```{r east-gallery-logger}
+#| label: fig-east-gallery-logger
+#| fig-cap: "Observations from data logger located in the East Gallery."
+#| fig-subcap: 
+#|   - "Temperature readings in the East Gallery."
+#|   - "Relative humidity readings in the East Gallery."
+#|   - "Dew point readings in the East Gallery."
+
+dygraph(ts_list$eg_temp,
+        main = "East Gallery: Temperature",
+        group = "eg") %>%
+  dySeries("V1",
+           label = "Temp (°F)",
+           color = "black") %>% 
+  dyLimit(65, color = "Red", label = "Temp Lower") %>% 
+  dyLimit(75, color = "Red", label = "Temp Upper") %>% 
+  dyAxis("y", label = "Temp (°F)") %>%
+  dyRangeSelector()
+
+dygraph(ts_list$eg_rh,
+        main = "East Gallery: % RH",
+        group = "eg") %>%
+  dySeries("V1",
+           label = "% RH",
+           color = "black") %>%
+  dyLimit(45, color = "Blue", label = "RH Lower") %>% 
+  dyLimit(55, color = "Blue", label = "RH Upper") %>% 
+  dyAxis("y", label = "% RH") %>%
+  dyRangeSelector()
+
+dygraph(ts_list$eg_dp,
+        main = "East Gallery: Dew Point",
+        group = "eg") %>%
+  dySeries("V1",
+           label = "°F Td",
+           color = "black") %>% 
+  dyAxis("y", label = "°F Td") %>%
+  dyRangeSelector()
+```
+:::
+
+## Basement
+
+<!-- Basement -->
+
+::: column-page
+```{r basement-logger}
+#| label: fig-basement-logger
+#| fig-cap: "Observations from data logger located in the basement."
+#| fig-subcap: 
+#|   - "Temperature readings in the Basement."
+#|   - "Relative humidity readings in the Basement."
+#|   - "Dew point readings in the Basement."
+
+dygraph(ts_list$base_temp,
+        main = "Basement: Temperature",
+        group = "basement") %>%
+  dySeries("V1",
+           label = "Temp (°F)",
+           color = "black") %>% 
+  dyLimit(65, color = "Red", label = "Temp Lower") %>% 
+  dyLimit(75, color = "Red", label = "Temp Upper") %>% 
+  dyAxis("y", label = "Temp (°F)") %>%
+  dyRangeSelector()
+
+dygraph(ts_list$base_rh,
+        main = "Basement: % RH",
+        group = "basement") %>%
+  dySeries("V1",
+           label = "% RH",
+           color = "black") %>%
+  dyLimit(45, color = "Blue", label = "RH Lower") %>% 
+  dyLimit(55, color = "Blue", label = "RH Upper") %>% 
+  dyAxis("y", label = "% RH") %>%
+  dyRangeSelector()
+
+dygraph(ts_list$base_dp,
+        main = "Basement: Dew Point",
+        group = "basement") %>%
+  dySeries("V1",
+           label = "°F Td",
+           color = "black") %>% 
+  dyAxis("y", label = "°F Td") %>%
+  dyRangeSelector()
+
+
+```
+:::
+:::

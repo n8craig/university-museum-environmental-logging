@@ -1,0 +1,121 @@
+UM_Textile
+
+Model
+
+EL-SIE-2+
+
+Serial Number
+
+248335025df78b8a
+
+Sample Rate
+
+10 Minutes
+
+Session Start Time
+
+2/24/2021 10:36:34 AM
+
+Display Mode
+
+Permanently On
+
+LED Mode
+
+Flash only in Alarm
+
+Sounder Mode
+
+Disabled
+
+Session Readings
+
+64794
+
+Memory Used
+
+11%
+
+
+
+
+	
+
+UM_WL
+
+Model
+
+EL-SIE-2+
+
+Serial Number
+
+244de2045df76daf
+
+Sample Rate
+
+10 Minutes
+
+Session Start Time
+
+2/24/2021 3:25:21 PM
+
+Display Mode
+
+Permanently On
+
+LED Mode
+
+Flash only in Alarm
+
+Sounder Mode
+
+Disabled
+
+Session Readings
+
+64766
+
+Memory Used
+
+11%
+
+
+	
+
+UM_EG
+
+Model
+
+EL-SIE-2+
+
+Serial Number
+
+248335025df7733c
+
+Sample Rate
+
+10 Minutes
+
+Session Start Time
+
+2/24/2021 10:45:11 AM
+
+Display Mode
+
+Permanently On
+
+LED Mode
+
+Flash only in Alarm
+
+Sounder Mode
+
+Disabled
+
+Session Readings
+
+64796
+
+Memory Used
+
+11%

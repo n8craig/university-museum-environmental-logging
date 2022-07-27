@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Nathan Craig">
+<meta name="dcterms.date" content="2022-05-20">
+
+<title>UM Environmental Data - Temperature and Humidity Logging at the University Museum</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">UM Environmental Data</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./rooms.html">Rooms</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./loggers.html">Loggers</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./projects.html">Projects</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Temperature and Humidity Logging at the University Museum</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <a href="https://univmuseum.nmsu.edu">Nathan Craig</a> 
+  </div>
+    <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            <a href="https://anthropology.nmsu.edu/">
+            NMSU Anthropology
+            </a>
+          </p>
+      </div>
+    </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 20, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="abstract-title">Abstract</div>
+    This document contains information on the NMSU University Museum’s environmental data loggers. Data are presented as a comparison across rooms and by logger.
+  </div>
+</div>
+
+</header>
+
+<p>The Museum records three kinds of environmental data: temperature (℉), percent humidity (%RH), and dew point (℉). These data are collected with EasyLog EL-SIE-2+ data loggers (<a href="#fig-loggers">Figure&nbsp;1</a>). See <a href="#sec-guidelines-for-temperature-and-humidity">Section&nbsp;1</a> for suggested ranges of temperature and relative humidity.</p>
+<div id="fig-loggers" class="column-page quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 25.0%;justify-content: center;">
+<div id="fig-textile-logger-photo" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="./images/basement_logger.jpg" class="img-fluid figure-img" data-ref-parent="fig-loggers"></p>
+<p></p><figcaption class="figure-caption">(a) Textile (temp)</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 25.0%;justify-content: center;">
+<div id="fig-wet-lab-logger-photo" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="./images/basement_logger.jpg" class="img-fluid figure-img" data-ref-parent="fig-loggers"></p>
+<p></p><figcaption class="figure-caption">(b) Wet Lab (temp)</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 25.0%;justify-content: center;">
+<div id="fig-east-gallery-logger-photo" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="./images/basement_logger.jpg" class="img-fluid figure-img" data-ref-parent="fig-loggers"></p>
+<p></p><figcaption class="figure-caption">(c) East Gallery (temp)</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 25.0%;justify-content: center;">
+<div id="fig-basement-logger-photo" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="./images/basement_logger.jpg" class="img-fluid figure-img" data-ref-parent="fig-loggers"></p>
+<p></p><figcaption class="figure-caption">(d) Basement</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure 1: University Museum data loggers</figcaption><p></p>
+</figure>
+</div>
+
+
+<div id="quarto-appendix" class="default"><section id="sec-guidelines-for-temperature-and-humidity" class="level1 appendix"><h2 class="quarto-appendix-heading">Guidelines for Temperature and Humidity</h2><div class="quarto-appendix-contents">
+
+<p>Garry Thomson’s <em>The Museum Environment</em> represented an important early work dealing with temperature, humidity, and dew point (along with light and pollutants). In terms of temperature, Thomson <span class="citation" data-cites="thomson1990">(<a href="#ref-thomson1990" role="doc-biblioref">1990, 268</a>)</span> suggests a Winter range of 64.5-68 (℉) and a Summer range of 73-77(℉). With respect to humidity, Thomson <span class="citation" data-cites="thomson1990">(<a href="#ref-thomson1990" role="doc-biblioref">1990, 119</a>)</span> writes:</p>
+<blockquote class="blockquote">
+<p>“Choice of RH level depends on several factors but cannot go too far from 50 or 55% RH. An exception may be found in the very low winter temperatures of Canada and north-eastern Europe where attempts at humidification to this level may endanger the building. The tolerance usually quoted of ± 4 or 5% RH is based more on what can be expected of an air-conditioning plant than on what exhibits can actually stand without deterioration, which is not known in any detail.”</p>
+</blockquote>
+<p>Thomson expected these values to be refined with further study.</p>
+<p>In April 12-13, 2010 a seminar entitled “<a href="https://web.archive.org/web/20110910052331/http://blog.conservation-us.org/blogpost.cfm?threadid=2227&amp;catid=175">Rethinking the Museum Climate</a>” was held by the Museum of Fine Arts (MFA), Boston and the Getty Conservation Institute at the MFA, Boston. A major thrust of the meeting was to rethink museums’ carbon footprint in light of climate change. Out of the meeting came a proposal to revise the standards developed in the early 20th century <span class="citation" data-cites="thomson1990">(<a href="#ref-thomson1990" role="doc-biblioref">Thomson 1990</a>)</span>.</p>
+<p>Later that same year, at the 2010 American Institute of Conservation (AIC) meeting the 3rd International Institute for Conservation of Historic and Artistic Works (IIC) Roundtable on “Dialogues for the new Century” held “The Plus/Minus Dilemma: The Way Forward in Environmental Guidelines” (<a href="https://www.iiconservation.org/sites/default/files/dialogues/plus-minus-en.pdf">transcript</a> and <a href="https://youtu.be/QCLxQlZcTmE">video</a>). The aim of this oft-cited discussion was to evaluate the existing standards for collections environments. If one can glean a consensus from the discussion, it was that many institutions struggle to remain within the previuosly established thresholds, and that these thresholds may need to be adjusted depending on the materials and the region. This seems generally consistent with Thomson <span class="citation" data-cites="thomson1990">(<a href="#ref-thomson1990" role="doc-biblioref">Thomson 1990</a>)</span>.</p>
+<p>The National Park Service’s <em>Museum Handbook</em> recommends that, where comfort of humans is a factor, most collections should be kept in conditions between 59-77 (℉) and 45-55% RH <span class="citation" data-cites="bacharach2019">(<a href="#ref-bacharach2019" role="doc-biblioref">Bacharach 2019, 4:22, 4:27</a>)</span>. The manual further notes that it is important to avoid extreme changes in either temperature or RH.</p>
+<p>The American Alliance of Museums, <em>Museum Registration Manual</em> (6th) <span class="citation" data-cites="mrm6:mu2020">(<a href="#ref-mrm6:mu2020" role="doc-biblioref">Simmons and Kiser 2020</a>)</span> chapter on “Preventative Care” <span class="citation" data-cites="bauerkilgo2020">(<a href="#ref-bauerkilgo2020" role="doc-biblioref">Bauer Kilgo 2020, 506</a>)</span> says:</p>
+<blockquote class="blockquote">
+<p>Traditionally, a universal standard of 70°F ± 5° and 50 percent relative humidity ±5 percent was encouraged for all collection storage. Although this standard was once a good rule of thumb, the emphasis now is on establishing set points for temperature and relative humidity that are based on the materials the collection objects are composed of and what the building heating and cooling systems can reasonably maintain with minimal fluctuations in a particular geographic area.</p>
+</blockquote>
+<section id="additional-links" class="level2">
+<h2 class="anchored" data-anchor-id="additional-links">Additional Links</h2>
+<ul>
+<li><a href="https://www.conservation-wiki.com/wiki/Environmental_Guidelines">Environmental Guidelines</a> at the AIC Wiki: This page has a fascinating history of HVAC systems.</li>
+<li>The Getty Conservation Institute’s Resources on <a href="https://www.getty.edu/conservation/publications_resources/newsletters/33_2/resources.html">Collection Environments</a> provides links to a number of reports and offers a list of research articles.</li>
+<li>The Smithsonian’s Museum Conservation Institute’s “<a href="https://www.si.edu/mci/english/research/consulting/MuseumEnvironment.html">Culmination of 20 Years of Green, Energy Savings Research</a>” provides an interesting perspective.</li>
+<li>Mecklenburg, M. F. “Determining the Acceptable Ranges of <a href="www.si.edu/mci/downloads/repor...cklenburg-Part1-RH.pdf">Relative Humidity</a> and <a href="www.si.edu/mci/downloads/repor...lenburg-Part2-Temp.pdf">Temperature</a> in Museums and Galleries,” Smithsonian Museum Conservation Institute. 2007.</li>
+</ul>
+
+
+
+</section>
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-bacharach2019" class="csl-entry" role="doc-biblioentry">
+Bacharach, Joan. 2019. <span>“Museum Collections Environment.”</span> In, edited by PPG, 4:1–69. Washington, D. C.: National Park Service. <a href="https://www.nps.gov/museum/publications/MHI/MHI.pdf">https://www.nps.gov/museum/publications/MHI/MHI.pdf</a>.
+</div>
+<div id="ref-bauerkilgo2020" class="csl-entry" role="doc-biblioentry">
+Bauer Kilgo, Robin. 2020. <span>“5I Preventative Care.”</span> In, edited by John E. Simmons and Toni M. Kiser, 6th edition, 504–14. Lanham Boulder New York London: Rowan &amp; Littlefield.
+</div>
+<div id="ref-mrm6:mu2020" class="csl-entry" role="doc-biblioentry">
+Simmons, John E., and Toni M. Kiser, eds. 2020. <em>MRM6: Museum Registration Methods</em>. 6th edition. Lanham Boulder New York London: Rowan &amp; Littlefield.
+</div>
+<div id="ref-thomson1990" class="csl-entry" role="doc-biblioentry">
+Thomson, Garry. 1990. <em>The Museum Environment</em>. 2nd ed. Butterworth-Heinemann series in Conservation and Museology. London: Butterworths [u.a.].
+</div>
+</div></section><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{craig2022,
+  author = {Nathan Craig},
+  title = {Temperature and {Humidity} {Logging} at the {University}
+    {Museum}},
+  date = {2022-05-20},
+  langid = {en},
+  abstract = {This document contains information on the NMSU University
+    Museum’s environmental data loggers. Data are presented as a
+    comparison across rooms and by logger.}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-craig2022" class="csl-entry quarto-appendix-citeas" role="doc-biblioentry">
+Nathan Craig. 2022. <span>“Temperature and Humidity Logging at the
+University Museum.”</span> May 20, 2022.
+</div></div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Temperature and Humidity Logging at the University Museum",
+    "section": "",
+    "text": "The Museum records three kinds of environmental data: temperature (℉), percent humidity (%RH), and dew point (℉). These data are collected with EasyLog EL-SIE-2+ data loggers (Figure 1). See Section 1 for suggested ranges of temperature and relative humidity."
+  },
+  {
+    "objectID": "index.html#additional-links",
+    "href": "index.html#additional-links",
+    "title": "Temperature and Humidity Logging at the University Museum",
+    "section": "Additional Links",
+    "text": "Additional Links\n\nEnvironmental Guidelines at the AIC Wiki: This page has a fascinating history of HVAC systems.\nThe Getty Conservation Institute’s Resources on Collection Environments provides links to a number of reports and offers a list of research articles.\nThe Smithsonian’s Museum Conservation Institute’s “Culmination of 20 Years of Green, Energy Savings Research” provides an interesting perspective.\nMecklenburg, M. F. “Determining the Acceptable Ranges of Relative Humidity and Temperature in Museums and Galleries,” Smithsonian Museum Conservation Institute. 2007."
+  },
+  {
+    "objectID": "loggers.html",
+    "href": "loggers.html",
+    "title": "Environmental Data by Logger",
+    "section": "",
+    "text": "This page displays temperature, relative humidity, and dew point by logger. These visualizations are useful for closely examining the conditions in a given room that is logged.\n\n\n\n\n\n\n\nTextile RoomWet LabEast GalleryBasement\n\n\n\n\n\n\n\n\n\n\n(a) Temperature readings in the Textile Room.\n\n\n\n\n\n\n(b) Relative humidity readings in the Textile Room.\n\n\n\n\n\n\n(c) Dew point readings in the Textile Room.\n\n\nFigure 1: Observations from data logger located in the textile room.\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Temperature readings in the Wet Lab.\n\n\n\n\n\n\n(b) Relative humidity readings in the Wet Lab.\n\n\n\n\n\n\n(c) Dew point readings in the Wet Lab.\n\n\nFigure 2: Observations from data logger located in the Wet Lab.\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Temperature readings in the East Gallery.\n\n\n\n\n\n\n(b) Relative humidity readings in the East Gallery.\n\n\n\n\n\n\n(c) Dew point readings in the East Gallery.\n\n\nFigure 3: Observations from data logger located in the East Gallery.\n\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Temperature readings in the Basement.\n\n\n\n\n\n\n(b) Relative humidity readings in the Basement.\n\n\n\n\n\n\n(c) Dew point readings in the Basement.\n\n\nFigure 4: Observations from data logger located in the basement.\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{untitled,\n  author = {},\n  title = {Environmental {Data} by {Logger}},\n  langid = {en}\n}\nFor attribution, please cite this work as:\n“Environmental Data by Logger.” n.d."
+  },
+  {
+    "objectID": "projects/2022-07-26-omdp/index.html",
+    "href": "projects/2022-07-26-omdp/index.html",
+    "title": "Organ Mountains Desert Peaks Perishables Exhibit",
+    "section": "",
+    "text": "Generally, being put on exhibit stresses objects. This is largely because high amplitude changes in environmental conditions stress objects, and the environmental conditions in a gallery often fluctuate more than the environmental conditions in storage. For delicate organic materials and textiles this issue of damage caused by fluctuating environmental conditions is particularly acute.\nIn the Fall of 2022, the University Museum will be exhibiting delicate archaeological perishables from Chavez Cave in the Organ Mountains of Las Cruces, NM. Exhibiting these objects thus presents some conservation challenges.\nGiven the research and heritage importance of these irreplaceable objects, and their delicate nature, we took several precautionary steps to ensure their safety while on display. Key among those was tracking environmental conditions and mitigating potentially harmful situations.\nOne of our primary concerns was determining the environmental conditions of the West Gallery and the specific micro-environments of the display cases. While we record environmental conditions in several rooms of the Museum, previously we were not logging conditions in the West Gallery because there were no organic materials on display. Therefore, to track the conditions in the West Gallery before setting up the exhibit we placed one of the Museum’s standard loggers in the room in early July of 2022. Several weeks later we followed up by including two additional loggers in the gallery that can be used to compare micro-environmental conditions inside and outside of display cases containing the objects. In total, three loggers were placed in the West Gallery: an EasyLog EL-SIE-2+ which is the primary logger used in the museum, and two Govee H5101 bluetooth loggers (Figure 1).\n\n\n\n\n\nFigure 1: EasyLog EL-SIE-2+ in the front and two Govee H5101 bluetooth loggers in the back.\n\n\nFirst, we wanted to see if the Govee loggers were consistent with readings generated by the EasyLog (Figures 2 and 3). If the data are consistent, then the Govee loggers can be used to compare conditions inside and outside of the display cases. After running these three loggers for 48 hours, we pulled the data to see if the three devices were getting consistent readings.\nSecond, we wanted to see if the conditions within the display cases are more stable than the conditions outside of the display cases. NOTE THIS IS NOT COMPLETE.\n\nTemperatureRelative Humidity\n\n\n\n\n\n\n\n\nFigure 2: Temperature readings across all monitored rooms.\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Relative humidity readings across all monitored rooms.\n\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{craig,\n  author = {Nathan Craig},\n  title = {Organ {Mountains} {Desert} {Peaks} {Perishables} {Exhibit}},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nNathan Craig. n.d. “Organ Mountains Desert Peaks Perishables\nExhibit.”"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "CitationBibTeX citation:@online{untitled,\n  author = {},\n  title = {Projects},\n  langid = {en}\n}\nFor attribution, please cite this work as:\n“Projects.” n.d."
+  },
+  {
+    "objectID": "rooms.html",
+    "href": "rooms.html",
+    "title": "Room Comparison by Data Type",
+    "section": "",
+    "text": "This page compares temperature, relative humidity, and dew point across rooms. These visualizations are useful for comparing conditions across the rooms that are monitored.\n\n\n\n\n\n\n\nTemperatureRelative HumidityDew Point\n\n\n\n\n\n\n\n\nFigure 1: Temperature readings across all monitored rooms.\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Relative humidity readings across all monitored rooms.\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Dew point readings across all monitored rooms.\n\n\n\n\n\n\n\n\n\n\nCitationBibTeX citation:@online{untitled,\n  author = {},\n  title = {Room {Comparison} by {Data} {Type}},\n  langid = {en}\n}\nFor attribution, please cite this work as:\n“Room Comparison by Data Type.” n.d."
+  }
+]

@@ -1,0 +1,49 @@
+---
+title: "Temperature and Humidity Logging at the University Museum"
+abstract: This document contains information on the NMSU University Museum's environmental data loggers. Data are presented as a comparison across rooms and by logger.
+date: 2022-05-20
+author: 
+  - name: Nathan Craig
+    url: https://univmuseum.nmsu.edu
+    affiliation: NMSU Anthropology
+    affiliation-url: https://anthropology.nmsu.edu/
+---
+
+The Museum records three kinds of environmental data: temperature (℉), percent humidity (%RH), and dew point (℉). These data are collected with EasyLog EL-SIE-2+ data loggers (@fig-loggers). See @sec-guidelines-for-temperature-and-humidity for suggested ranges of temperature and relative humidity.
+
+::: {#fig-loggers .column-page layout-nrow="1"}
+![Textile (temp)](./images/basement_logger.jpg){#fig-textile-logger-photo}
+
+![Wet Lab (temp)](./images/basement_logger.jpg){#fig-wet-lab-logger-photo}
+
+![East Gallery (temp)](./images/basement_logger.jpg){#fig-east-gallery-logger-photo}
+
+![Basement](./images/basement_logger.jpg){#fig-basement-logger-photo}
+
+University Museum data loggers
+:::
+
+# Guidelines for Temperature and Humidity {#sec-guidelines-for-temperature-and-humidity .appendix}
+
+Garry Thomson's *The Museum Environment* represented an important early work dealing with temperature, humidity, and dew point (along with light and pollutants). In terms of temperature, Thomson [-@thomson1990, 268] suggests a Winter range of 64.5-68 (℉) and a Summer range of 73-77(℉). With respect to humidity, Thomson [-@thomson1990, 119] writes:
+
+> "Choice of RH level depends on several factors but cannot go too far from 50 or 55% RH. An exception may be found in the very low winter temperatures of Canada and north-eastern Europe where attempts at humidification to this level may endanger the building. The tolerance usually quoted of ± 4 or 5% RH is based more on what can be expected of an air-conditioning plant than on what exhibits can actually stand without deterioration, which is not known in any detail."
+
+Thomson expected these values to be refined with further study.
+
+In April 12-13, 2010 a seminar entitled "[Rethinking the Museum Climate](https://web.archive.org/web/20110910052331/http://blog.conservation-us.org/blogpost.cfm?threadid=2227&catid=175)" was held by the Museum of Fine Arts (MFA), Boston and the Getty Conservation Institute at the MFA, Boston. A major thrust of the meeting was to rethink museums' carbon footprint in light of climate change. Out of the meeting came a proposal to revise the standards developed in the early 20th century [@thomson1990].
+
+Later that same year, at the 2010 American Institute of Conservation (AIC) meeting the 3rd International Institute for Conservation of Historic and Artistic Works (IIC) Roundtable on "Dialogues for the new Century" held "The Plus/Minus Dilemma: The Way Forward in Environmental Guidelines" ([transcript](https://www.iiconservation.org/sites/default/files/dialogues/plus-minus-en.pdf) and [video](https://youtu.be/QCLxQlZcTmE)). The aim of this oft-cited discussion was to evaluate the existing standards for collections environments. If one can glean a consensus from the discussion, it was that many institutions struggle to remain within the previuosly established thresholds, and that these thresholds may need to be adjusted depending on the materials and the region. This seems generally consistent with Thomson [@thomson1990].
+
+The National Park Service's *Museum Handbook* recommends that, where comfort of humans is a factor, most collections should be kept in conditions between 59-77 (℉) and 45-55% RH [@bacharach2019, 4:22, 4:27]. The manual further notes that it is important to avoid extreme changes in either temperature or RH.
+
+The American Alliance of Museums, *Museum Registration Manual* (6th) [@mrm6:mu2020] chapter on "Preventative Care" [@bauerkilgo2020, 506] says:
+
+> Traditionally, a universal standard of 70°F ± 5° and 50 percent relative humidity ±5 percent was encouraged for all collection storage. Although this standard was once a good rule of thumb, the emphasis now is on establishing set points for temperature and relative humidity that are based on the materials the collection objects are composed of and what the building heating and cooling systems can reasonably maintain with minimal fluctuations in a particular geographic area.
+
+## Additional Links
+
+-   [Environmental Guidelines](https://www.conservation-wiki.com/wiki/Environmental_Guidelines) at the AIC Wiki: This page has a fascinating history of HVAC systems.
+-   The Getty Conservation Institute's Resources on [Collection Environments](https://www.getty.edu/conservation/publications_resources/newsletters/33_2/resources.html) provides links to a number of reports and offers a list of research articles.
+-   The Smithsonian's Museum Conservation Institute's "[Culmination of 20 Years of Green, Energy Savings Research](https://www.si.edu/mci/english/research/consulting/MuseumEnvironment.html)" provides an interesting perspective.
+-   Mecklenburg, M. F. "Determining the Acceptable Ranges of [Relative Humidity](www.si.edu/mci/downloads/repor...cklenburg-Part1-RH.pdf) and [Temperature](www.si.edu/mci/downloads/repor...lenburg-Part2-Temp.pdf) in Museums and Galleries," Smithsonian Museum Conservation Institute. 2007.

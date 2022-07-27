@@ -1,0 +1,26 @@
+project:
+  type: website
+  pre-render: .scripts/read_data.R
+  output-dir: docs
+
+website:
+  title: "UM Environmental Data"
+  navbar:
+    left:
+      - text: "Rooms"
+        file: rooms.qmd
+      - text: "Loggers"
+        file: loggers.qmd
+      - projects.qmd
+
+citation: true
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+
+editor: source
+

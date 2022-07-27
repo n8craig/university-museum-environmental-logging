@@ -1,0 +1,121 @@
+---
+title: "Room Comparison by Data Type"
+---
+
+*Last modified: `r format(Sys.time(), '%A, %B %d, %Y')`*
+
+This page compares temperature, relative humidity, and dew point across rooms. These visualizations are useful for comparing conditions across the rooms that are monitored.
+
+```{r setup, include=FALSE}
+
+# Knitr options
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+  )
+
+# Load data
+# source("read_data.R")
+# sys.source("read_data.R")
+# library(ggplot2)
+
+library(readr) # read CSV file
+library(tidyverse)
+# library(plotly) # interactive plots
+
+# Time series
+library(xts) # convert df to ts
+library(dygraphs) # plot ts 
+
+```
+
+
+```{r read-data}
+source(here::here("scripts/read_data.R"))
+```
+
+```{r set-alpha}
+plot_alpha <- 0.7
+```
+
+
+::: panel-tabset
+## Temperature
+
+::: column-page
+```{r temp-all}
+#| label: fig-temp-all
+#| fig-cap: "Temperature readings across all monitored rooms."
+
+dygraph(ts_list$temp_merge,
+        main = "Temperature (°F) in all monitored rooms") %>% 
+  dyRoller(rollPeriod = 10) %>% 
+  dyHighlight(highlightCircleSize = 5,
+              highlightSeriesBackgroundAlpha = 0.2,
+              hideOnMouseOut = TRUE) %>% 
+  dySeries("textile_temp", label = "Textile Room") %>% 
+  dySeries("wl_temp", label = "Wet Lab") %>% 
+  dySeries("eg_temp", label = "East Gallery") %>% 
+  dySeries("base_temp", label = "Basement") %>% 
+  
+  
+  dyLimit(65, color = "Red", label = "Temp Lower") %>% 
+  dyLimit(75, color = "Red", label = "Temp Upper") %>% 
+  dyAxis("y", label = "Temperature (°F)") %>% 
+  dyRangeSelector()
+```
+:::
+
+## Relative Humidity
+
+::: column-page
+```{r rh-all}
+#| label: fig-rh-all
+#| fig-cap: "Relative humidity readings across all monitored rooms."
+
+dygraph(ts_list$rh_merge,
+        main = "% Relative Humidity (°F) in all monitored rooms") %>% 
+  dyRoller(rollPeriod = 10) %>% 
+  dyHighlight(highlightCircleSize = 5,
+              highlightSeriesBackgroundAlpha = 0.2,
+              hideOnMouseOut = TRUE) %>% 
+  dySeries("textile_rh", label = "Textile Room") %>% 
+  dySeries("wl_rh", label = "Wet Lab") %>% 
+  dySeries("eg_rh", label = "East Gallery") %>% 
+  dySeries("base_rh", label = "Basement") %>% 
+  
+  
+  dyLimit(45, color = "Blue", label = "RH Lower") %>% 
+  dyLimit(55, color = "Blue", label = "RH Upper") %>% 
+  dyAxis("y", label = "% RH (°F)") %>% 
+  dyRangeSelector()
+```
+:::
+
+## Dew Point
+
+::: column-page
+```{r dp-all}
+#| label: fig-dp-all
+#| fig-cap: "Dew point readings across all monitored rooms."
+
+dygraph(ts_list$dp_merge,
+        main = "Dew Pointn in all monitored rooms (°F Td)") %>% 
+  dyRoller(rollPeriod = 10) %>% 
+  dyHighlight(highlightCircleSize = 5,
+              highlightSeriesBackgroundAlpha = 0.2,
+              hideOnMouseOut = TRUE) %>% 
+  dySeries("textile_dp", label = "Textile Room") %>% 
+  dySeries("wl_dp", label = "Wet Lab") %>% 
+  dySeries("eg_dp", label = "East Gallery") %>% 
+  dySeries("base_dp", label = "Basement") %>% 
+  
+  
+  dyLimit(45, color = "Blue", label = "RH Lower") %>% 
+  dyLimit(55, color = "Blue", label = "RH Upper") %>% 
+  dyAxis("y", label = "Dew Point (°F Td)") %>% 
+  dyRangeSelector()
+```
+:::
+:::
